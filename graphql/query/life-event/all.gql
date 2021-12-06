@@ -1,0 +1,11 @@
+#import '../../fragment/LifeEventFragment.gql'
+
+query AllLifeEvents(
+  $orderBy: LifeEventOrder
+) {
+  allLifeEvents(
+    orderBy: $orderBy
+  ) {
+    ...LifeEventFragment
+  }
+}

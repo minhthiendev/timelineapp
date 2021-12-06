@@ -1,0 +1,45 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": [
+          "."
+        ],
+        "alias": {
+          "components": "./components",
+          "utils": "./utils",
+          "graphql": "./graphql",
+          "contexts": "./contexts",
+          "hooks": "./hooks",
+          "lib": "./lib",
+          "public": "./public"
+        },
+        "cwd": "babelrc"
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties"
+    ],
+    [
+      "@babel/plugin-proposal-object-rest-spread"
+    ],
+    [
+      "@babel/plugin-syntax-dynamic-import"
+    ],
+    [
+      "styled-jsx/babel",
+      {
+        "optimizeForSpeed": true,
+        "vendorPrefixes": false
+      }
+    ]
+  ],
+  "presets": [
+    "@babel/react"
+  ],
+  "ignore": [
+    "node_modules",
+    ".next"
+  ]
+}

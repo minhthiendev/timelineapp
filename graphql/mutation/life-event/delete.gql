@@ -1,0 +1,11 @@
+
+mutation DeleteLifeEvent(
+  $id: String!
+) {
+  deleteLifeEvent(
+    id: $id
+  ) {
+    success
+    message
+  }
+}

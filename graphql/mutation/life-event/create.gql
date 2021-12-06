@@ -1,0 +1,17 @@
+#import '../../fragment/LifeEventFragment.gql'
+
+mutation CreateLifeEvent(
+  $date: Date!
+  $content: String!
+) {
+  createLifeEvent(
+    date: $date
+    content: $content
+  ) {
+    success
+    message
+    lifeEvent {
+      ...LifeEventFragment
+    }
+  }
+}

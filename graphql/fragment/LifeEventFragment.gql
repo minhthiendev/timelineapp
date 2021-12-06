@@ -1,0 +1,5 @@
+fragment LifeEventFragment on LifeEvent {
+  id
+  date
+  content
+}
